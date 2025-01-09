@@ -1,5 +1,7 @@
 // pixelGrid.js
 
+const pixels = 10; // Adjust the "10" to control how many fields per row
+
 export function createGrid(containerSelector, rows, columns) {
     const container = document.querySelector(containerSelector);
 
@@ -53,9 +55,9 @@ export function resizeFields() {
         let fieldSize = 0;
         if (containerWidth < containerHeight) {
             // Calculate field size based on container width and height
-            fieldSize = containerWidth / 10; // Adjust the "10" to control how many fields per row
+            fieldSize = containerWidth / pixels;
         } else {
-            fieldSize = containerHeight / 10;
+            fieldSize = containerHeight / pixels;
         }
 
         // Set the calculated width and height to the fields
