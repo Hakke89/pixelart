@@ -2,6 +2,7 @@ import { ColorUtil } from "./colorUtil.js";
 import { StorageManager } from "./storageManager.js";
 import { MouseHandler } from "./mouseHandler.js";
 import { createGrid, resizeFields } from "./pixelGrid.js";
+import { pixels } from "./main.js";
 
 MouseHandler.initEventListeners();
 
@@ -113,7 +114,7 @@ export const EventHandlers = {
 
         resetBtn.addEventListener("click", () => {
             if (confirm("Are you sure you want to reset the drawing?")) {
-                createGrid("#pixel-drawing", 10, 10);
+                createGrid("#pixel-drawing", pixels, pixels);
                 resizeFields();
             }
         });
