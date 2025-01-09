@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloring picture</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Make your pixel art</h1>
+    </header>
+    <main id="pixel-drawing">
+    </main>
+    <aside>
+        <h4>Pick a color</h4>
+        <input type="color" id="color-picker" value="#000000" class="color-picker color-square js-color-square">
+        <h4>Save colors</h4>
+        <div class="color-palette">
+            <div id="color1" class="color-square js-color-square"></div>
+            <div id="color2" class="color-square js-color-square"></div>
+            <div id="color3" class="color-square js-color-square"></div>
+            <div id="color4" class="color-square js-color-square"></div>
+            <div id="color5" class="color-square js-color-square"></div>
+            <div id="color6" class="color-square js-color-square"></div>
+            <div id="color7" class="color-square js-color-square"></div>
+            <div id="color8" class="color-square js-color-square"></div>
+            <div id="color9" class="color-square js-color-square"></div>
+            <div id="color10" class="color-square js-color-square"></div>
+            <button id="save-btn">Save</button>
+            <button id="clear-btn">Clear</button>
+        </div>
+        <div id="clear" class="color-square"></div>
+        <i class="fa-regular fa-eraser fa-3x"></i>
+        <button id="reset-btn">Reset drawing</button>
+    </aside>
+    <footer>Hannes Vandelaer 2024</footer>
+</body>
+
+</html>
