@@ -1,6 +1,6 @@
 // pixelGrid.js
 
-const pixels = 10; // Adjust the "10" to control how many fields per row
+import { pixels } from "./main.js";
 
 export function createGrid(containerSelector, rows, columns) {
     const container = document.querySelector(containerSelector);
@@ -40,11 +40,6 @@ export function resizeFields() {
         const padding = 20; // resize for more or less padding css auto adapts
         const fields = document.querySelectorAll(".field");
         const container = document.getElementById("pixel-drawing");
-
-        if (container) {
-            // Set a new value for the --paddingContainer variable
-            container.style.setProperty("--paddingContainer", padding + "px");
-        }
 
         if (container === null) {
             throw new Error("Could not find #pixel-drawing element!");

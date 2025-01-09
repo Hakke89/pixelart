@@ -4,6 +4,8 @@ import { StorageManager } from "./storageManager.js";
 import { EventHandlers } from "./eventHandlers.js";
 import { createGrid, resizeFields } from "./pixelGrid.js";
 
+export const pixels = 20; //adjust to change the amount of pixels
+
 // Disable dragging for all elements
 document.addEventListener("dragstart", (event) => {
     event.preventDefault();
@@ -16,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // make a grid of emty squares in the container
-createGrid("#pixel-drawing", 10, 10);
+createGrid("#pixel-drawing", pixels, pixels);
 
 window.addEventListener("resize", resizeFields);
 window.addEventListener("DOMContentLoaded", resizeFields);
