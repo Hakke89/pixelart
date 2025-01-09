@@ -1,0 +1,127 @@
+:root {
+    --fieldWidth: 30px;
+    --fieldHeight: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+
+    display: grid;
+    grid-template-columns: 100px 4fr;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer"
+    ;
+
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    width: 100vw;
+
+    /* no scroll */
+    overflow-x: hidden;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+header h1 {
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+    text-align: center;
+    background: #232323;
+    color: white;
+    padding: 5px;
+}
+
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    align-items: center;
+}
+
+.color-square {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.color-square.active {
+    border: 3px solid red;
+}
+
+.color-square.activeRed {
+    border: 3px solid white;
+}
+
+button {
+    margin-bottom: 1rem;
+}
+
+#eraser-btn {
+    padding: 0.75rem;
+}
+
+#eraser-btn.active {
+    border: 3px solid red;
+}
+
+/* control the popup screen for input[type=color] */
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border: 3px solid transparent;
+}
+
+#pixel-drawing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* center content */
+    justify-content: center;
+    align-content: center;
+    background-color: whitesmoke;
+}
+
+.field {
+    height: var(--fieldHeight);
+    width: var(--fieldWidth);
+    cursor: pointer;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 425px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
