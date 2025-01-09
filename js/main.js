@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // make a grid of emty squares in the container
 createGrid("#pixel-drawing", pixels, pixels);
+resizeFields();
 
 window.addEventListener("resize", resizeFields);
 window.addEventListener("DOMContentLoaded", resizeFields);
