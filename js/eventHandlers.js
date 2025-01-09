@@ -116,6 +116,7 @@ export const EventHandlers = {
             if (confirm("Are you sure you want to reset the drawing?")) {
                 createGrid("#pixel-drawing", pixels, pixels);
                 resizeFields();
+                EventHandlers.attachEventListeners();
             }
         });
 
