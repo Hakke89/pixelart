@@ -8,7 +8,6 @@ This project is a web-based application that allows users to create pixel art us
 - **Save Colors**: Save up to 10 colors for quick access.
 - **Eraser**: Use the eraser tool to remove colors from the pixel art.
 - **Reset Drawing**: Reset the entire drawing area to start over.
-- **Custom Grid Size**: Specify the number of pixels for the drawing grid.
 - **Responsive Design**: The application is responsive and works well on different screen sizes.
 
 ## Technologies Used
